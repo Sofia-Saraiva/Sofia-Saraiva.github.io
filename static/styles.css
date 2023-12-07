@@ -11,9 +11,14 @@
 
 section {
     display: grid;
-    place-items: center;
+    place-items: end;
     align-content: center;
     min-height: 100vh;
+    padding-inline: 20%;
+}
+
+section:nth-child(odd) {
+    place-items: start;
 }
 
 header {
@@ -40,25 +45,62 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    color: #bfc5ff;
+    color: #00ff9f;
 }
 
 .title {
-    color: #ffffcc;
+    color: #00ff9f;
     font-weight: 900;
-    font-size: 100px;
-    width: 11ch;
-    animation: typing 2s steps(11), blink .4s step-end infinite alternate;
+    font-size: 90px;
+    width: 13ch;
+    animation: typing 2s steps(13), blink .4s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
-  }
-  
+}
 
+h1::selection,
+p::selection,
+nav a::selection {
+    background-color: #3d3f57;
+}
+  
 @keyframes blink {
     50% { border-color: transparent }
 }
 
 @keyframes typing {
     from { width: 0 }
+}
+
+.intro {
+    width: 60rem;
+    font-size: 18px;
+    margin-top: 1%;
+    line-height: 1.6;
+}
+
+.sub-title {
+    font-size: 60px;
+    color: #d8dcff;
+}
+
+.socials {
+    margin-top: 1%;
+}
+
+.social-icon {
+    font-size: 36px; 
+}
+
+a:hover .fa,
+a:hover .fab {
+    color: #00ff9f;
+}
+
+footer {
+    display: grid;
+    place-items: center;
+    padding: 1%;
+    opacity: 70%;
 }
