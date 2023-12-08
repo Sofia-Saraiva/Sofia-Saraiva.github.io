@@ -113,6 +113,7 @@ nav a::selection {
 .social-icon {
     font-size: 36px; 
     transition: transform 0.3s ease-in-out;
+    margin-right: 2rem;
 }
 
 a:hover .fa,
