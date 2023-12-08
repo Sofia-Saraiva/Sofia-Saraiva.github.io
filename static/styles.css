@@ -50,6 +50,25 @@ nav a.active {
     color: #00ff9f;
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
 .title {
     color: #00ff9f;
     font-weight: 900;
@@ -246,7 +265,7 @@ footer {
     }
     
     #about a span {
-        margin-top: 10rem;
+        margin-top: 8rem;
         margin-inline: 8.8rem;
     }
 
@@ -259,4 +278,7 @@ footer {
         height: 10rem;
     }
     
+    .card-content p {
+        font-size: 11px;
+    }
 }
